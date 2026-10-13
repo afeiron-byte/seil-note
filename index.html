@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>세일고등학교 학습노트</title>
+  <style>
+    /* 인쇄 및 A4 표준 레이아웃 설정 */
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+    * {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #e5e5e5;
+      font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", "Apple SD Gothic Neo", sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        gap: 0;
+      }
+      .page {
+        page-break-after: always;
+        box-shadow: none !important;
+        margin: 0 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= [1] 표지 (COVER) ================= -->
+  <div class="page" style="width: 210mm; height: 297mm; background-color: #FAF8F5; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+    <!-- 상단 학교 전경 이미지 배경 영역 -->
+    <div style="position: relative; width: 100%; height: 46%; overflow: hidden;">
+      <img src="image_980e81.jpg" alt="세일고등학교 전경" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.92) contrast(1.05);">
+      <!-- 그라데이션 오버레이 -->
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(160, 36, 17, 0.4) 0%, rgba(250, 248, 245, 0.1) 60%, #FAF8F5 100%);"></div>
+      
+      <!-- 상단 엠블럼 배치 -->
+      <div style="position: absolute; top: 22mm; left: 20mm; display: flex; align-items: center; gap: 15px; background: rgba(255, 255, 255, 0.9); padding: 8px 18px; border-radius: 40px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <img src="세일고CI-01.png" alt="세일고 CI" style="width: 48px; height: 48px; object-fit: contain;">
+        <div>
+          <div style="font-size: 17px; font-weight: 800; color: #a02411; letter-spacing: -0.5px;">세일고등학교</div>
+          <div style="font-size: 10px; color: #555; font-weight: 600; letter-spacing: 0.5px;">SE-IL HIGH SCHOOL</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 중앙 타이틀 및 슬로건 영역 -->
+    <div style="padding: 0 24mm; text-align: center; margin-top: -15mm; z-index: 2;">
+      <!-- 슬로건 이미지 -->
+      <div style="margin-bottom: 22px;">
+        <img src="세일로미래로꿈꾸는대로.png" alt="세일로 미래로 꿈꾸는대로" style="max-width: 320px; height: auto;">
+      </div>
+
+      <!-- 메인 노트 타이틀 -->
+      <div style="display: inline-block; border-top: 3px solid #a02411; border-bottom: 3px solid #a02411; padding: 12px 35px; margin-bottom: 20px;">
+        <h1 style="margin: 0; font-size: 38px; color: #222222; font-weight: 900; letter-spacing: 2px;">학 습 노 트</h1>
+      </div>
+      <p style="margin: 0; font-size: 14px; color: #666; font-weight: 500; letter-spacing: 1px;">STUDY &amp; THINKING WORKBOOK</p>
+    </div>
+
+    <!-- 하단 사용자 정보 기입란 -->
+    <div style="padding: 0 25mm 28mm 25mm; z-index: 2;">
+      <div style="background-color: #FFFFFF; border: 1.5px solid #E2DDD5; border-radius: 12px; padding: 22px 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px 24px;">
+          <div style="display: flex; align-items: flex-end; border-bottom: 1.5px solid #C8C3BA; padding-bottom: 5px;">
+            <span style="font-size: 13px; font-weight: 700; color: #a02411; width: 60px;">학 년 / 반</span>
+            <span style="flex: 1;"></span>
+          </div>
+          <div style="display: flex; align-items: flex-end; border-bottom: 1.5px solid #C8C3BA; padding-bottom: 5px;">
+            <span style="font-size: 13px; font-weight: 700; color: #a02411; width: 60px;">번 호</span>
+            <span style="flex: 1;"></span>
+          </div>
+          <div style="display: flex; align-items: flex-end; border-bottom: 1.5px solid #C8C3BA; padding-bottom: 5px;">
+            <span style="font-size: 13px; font-weight: 700; color: #a02411; width: 60px;">이 름</span>
+            <span style="flex: 1;"></span>
+          </div>
+          <div style="display: flex; align-items: flex-end; border-bottom: 1.5px solid #C8C3BA; padding-bottom: 5px;">
+            <span style="font-size: 13px; font-weight: 700; color: #a02411; width: 60px;">과 목</span>
+            <span style="flex: 1;"></span>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 18px; font-size: 11px; color: #888;">
+        세일고등학교 학생들의 꿈과 배움을 응원합니다.
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ================= [2] 코넬식 노트 (CORNELL) ================= -->
+  <div class="page" style="width: 210mm; height: 297mm; background-color: #FAF8F5; padding: 18mm 16mm; position: relative; box-shadow: 0 4px 15px rgba(0,0,0,0.15); display: flex; flex-direction: column;">
+    <!-- 헤더 -->
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2px solid #a02411; padding-bottom: 8px; margin-bottom: 12px;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="font-size: 18px; font-weight: 800; color: #a02411;">CORNELL NOTE</span>
+        <span style="font-size: 12px; color: #777;">| 코넬식 학습 노트</span>
+      </div>
+      <div style="display: flex; gap: 15px; font-size: 12px; color: #555;">
+        <span><strong>일시:</strong> 202&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span><strong>과목:</strong> ____________</span>
+        <span><strong>단원/주제:</strong> ____________________</span>
+      </div>
+    </div>
+
+    <!-- 코넬 바디 (키워드/큐 컬럼 + 본문 필기 컬럼) -->
+    <div style="flex: 1; display: flex; border: 1.5px solid #D8DFD5; background: #FAF8F5;">
+      <!-- 키워드/질문/큐 영역 -->
+      <div style="width: 32%; border-right: 1.5px solid #a02411; padding: 12px; background-color: rgba(240, 237, 230, 0.4);">
+        <div style="font-size: 12px; font-weight: 700; color: #a02411; margin-bottom: 8px; border-bottom: 1px dashed #C8C3BA; padding-bottom: 4px;">핵심 키워드 / 질문</div>
+      </div>
+      <!-- 메인 노트 필기 영역 (8mm 줄) -->
+      <div style="width: 68%; padding: 12px; background-image: repeating-linear-gradient(transparent, transparent 23px, #D8DFD5 23px, #D8DFD5 24px); background-size: 100% 24px;">
+        <div style="font-size: 12px; font-weight: 700; color: #555; margin-bottom: 6px;">강의 및 필기 내용</div>
+      </div>
+    </div>
+
+    <!-- 하단 요약(Summary) 영역 -->
+    <div style="height: 48mm; margin-top: 10px; border: 1.5px solid #D8DFD5; padding: 10px 14px; background-color: rgba(255, 255, 255, 0.6); background-image: repeating-linear-gradient(transparent, transparent 23px, #E5E2DA 23px, #E5E2DA 24px); background-size: 100% 24px;">
+      <div style="font-size: 12px; font-weight: 700; color: #a02411; margin-bottom: 4px;">요약 (Summary)</div>
+    </div>
+
+    <!-- 푸터 -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px; font-size: 10px; color: #999;">
+      <span>세일고등학교</span>
+      <span>Cornell Note 양식</span>
+    </div>
+  </div>
+
+
+  <!-- ================= [3] 오답 노트 (INCORRECT ANSWER NOTE) ================= -->
+  <div class="page" style="width: 210mm; height: 297mm; background-color: #FAF8F5; padding: 18mm 16mm; position: relative; box-shadow: 0 4px 15px rgba(0,0,0,0.15); display: flex; flex-direction: column;">
+    <!-- 헤더 -->
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2px solid #a02411; padding-bottom: 8px; margin-bottom: 14px;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="font-size: 18px; font-weight: 800; color: #a02411;">ERROR ANALYSIS NOTE</span>
+        <span style="font-size: 12px; color: #777;">| 오답 분석 노트</span>
+      </div>
+      <div style="display: flex; gap: 15px; font-size: 12px; color: #555;">
+        <span><strong>과목:</strong> ____________</span>
+        <span><strong>출처/시험명:</strong> ____________________</span>
+      </div>
+    </div>
+
+    <!-- 2문제 반복 레이아웃 -->
+    <div style="flex: 1; display: flex; flex-direction: column; gap: 14px;">
+      
+      <!-- 문제 1 블록 -->
+      <div style="flex: 1; border: 1.5px solid #D8DFD5; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; background: #fff;">
+        <!-- 문제 메타 바 -->
+        <div style="background-color: #F1EDE4; padding: 6px 12px; display: flex; justify-content: space-between; font-size: 11px; color: #333; border-bottom: 1px solid #D8DFD5;">
+          <div><strong>문항 번호:</strong> NO. _____ &nbsp;&nbsp;|&nbsp;&nbsp; <strong>단원/개념:</strong> ______________________</div>
+          <div><strong>오답 원인:</strong> [ ] 개념부족 [ ] 계산실수 [ ] 지문오독 [ ] 시간부족</div>
+        </div>
+        <!-- 2분할: 좌측 문제 / 우측 바른 풀이 -->
+        <div style="flex: 1; display: flex;">
+          <div style="width: 48%; border-right: 1.5px dashed #D8DFD5; padding: 10px; background-color: #FAF8F5; display: flex; flex-direction: column;">
+            <div style="font-size: 11px; font-weight: 700; color: #a02411; margin-bottom: 4px;">[ 문제 및 나의 풀이 (오답) ]</div>
+          </div>
+          <div style="width: 52%; padding: 10px; background-color: #FAF8F5; background-image: repeating-linear-gradient(transparent, transparent 21px, #E5E2DA 21px, #E5E2DA 22px); background-size: 100% 22px;">
+            <div style="font-size: 11px; font-weight: 700; color: #1f5f3f; margin-bottom: 4px;">[ 올바른 풀이 &amp; 피드백 ]</div>
+          </div>
+        </div>
+        <!-- 핵심 포인트/개념 박스 -->
+        <div style="border-top: 1px solid #D8DFD5; padding: 6px 12px; background-color: #F7F5EE; font-size: 11px;">
+          <strong style="color: #a02411;">💡 핵심 공식 및 다시 볼 개념:</strong>
+        </div>
+      </div>
+
+      <!-- 문제 2 블록 -->
+      <div style="flex: 1; border: 1.5px solid #D8DFD5; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; background: #fff;">
+        <!-- 문제 메타 바 -->
+        <div style="background-color: #F1EDE4; padding: 6px 12px; display: flex; justify-content: space-between; font-size: 11px; color: #333; border-bottom: 1px solid #D8DFD5;">
+          <div><strong>문항 번호:</strong> NO. _____ &nbsp;&nbsp;|&nbsp;&nbsp; <strong>단원/개념:</strong> ______________________</div>
+          <div><strong>오답 원인:</strong> [ ] 개념부족 [ ] 계산실수 [ ] 지문오독 [ ] 시간부족</div>
+        </div>
+        <!-- 2분할: 좌측 문제 / 우측 바른 풀이 -->
+        <div style="flex: 1; display: flex;">
+          <div style="width: 48%; border-right: 1.5px dashed #D8DFD5; padding: 10px; background-color: #FAF8F5; display: flex; flex-direction: column;">
+            <div style="font-size: 11px; font-weight: 700; color: #a02411; margin-bottom: 4px;">[ 문제 및 나의 풀이 (오답) ]</div>
+          </div>
+          <div style="width: 52%; padding: 10px; background-color: #FAF8F5; background-image: repeating-linear-gradient(transparent, transparent 21px, #E5E2DA 21px, #E5E2DA 22px); background-size: 100% 22px;">
+            <div style="font-size: 11px; font-weight: 700; color: #1f5f3f; margin-bottom: 4px;">[ 올바른 풀이 &amp; 피드백 ]</div>
+          </div>
+        </div>
+        <!-- 핵심 포인트/개념 박스 -->
+        <div style="border-top: 1px solid #D8DFD5; padding: 6px 12px; background-color: #F7F5EE; font-size: 11px;">
+          <strong style="color: #a02411;">💡 핵심 공식 및 다시 볼 개념:</strong>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 푸터 -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px; font-size: 10px; color: #999;">
+      <span>세일고등학교</span>
+      <span>오답노트 양식</span>
+    </div>
+  </div>
+
+
+  <!-- ================= [4] 모눈종이 (GRID - 5mm) ================= -->
+  <div class="page" style="width: 210mm; height: 297mm; background-color: #FAF8F5; padding: 18mm 16mm; position: relative; box-shadow: 0 4px 15px rgba(0,0,0,0.15); display: flex; flex-direction: column;">
+    <!-- 헤더 -->
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2px solid #a02411; padding-bottom: 8px; margin-bottom: 12px;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="font-size: 18px; font-weight: 800; color: #a02411;">GRID NOTE</span>
+        <span style="font-size: 12px; color: #777;">| 5mm 방안 모눈</span>
+      </div>
+      <div style="display: flex; gap: 15px; font-size: 12px; color: #555;">
+        <span><strong>DATE:</strong> 202&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span><strong>TITLE:</strong> __________________________</span>
+      </div>
+    </div>
+
+    <!-- 5mm 모눈 본문 (눈 피로 완화 그린-그레이 톤 적용) -->
+    <div style="flex: 1; border: 1px solid #D8DFD5; background-color: #FAF8F5; background-image: 
+        linear-gradient(to right, #E0DDD5 1px, transparent 1px),
+        linear-gradient(to bottom, #E0DDD5 1px, transparent 1px);
+        background-size: 5mm 5mm;">
+    </div>
+
+    <!-- 푸터 -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px; font-size: 10px; color: #999;">
+      <span>세일고등학교</span>
+      <span>5mm Grid 양식</span>
+    </div>
+  </div>
+
+
+  <!-- ================= [5] 라인형 노트 (RULED - 8mm) ================= -->
+  <div class="page" style="width: 210mm; height: 297mm; background-color: #FAF8F5; padding: 18mm 16mm; position: relative; box-shadow: 0 4px 15px rgba(0,0,0,0.15); display: flex; flex-direction: column;">
+    <!-- 헤더 -->
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2px solid #a02411; padding-bottom: 8px; margin-bottom: 12px;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="font-size: 18px; font-weight: 800; color: #a02411;">RULED NOTE</span>
+        <span style="font-size: 12px; color: #777;">| 8mm 줄노트</span>
+      </div>
+      <div style="display: flex; gap: 15px; font-size: 12px; color: #555;">
+        <span><strong>DATE:</strong> 202&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span><strong>TITLE:</strong> __________________________</span>
+      </div>
+    </div>
+
+    <!-- 8mm 줄노트 본문 -->
+    <div style="flex: 1; border: 1px solid #D8DFD5; background-color: #FAF8F5; background-image: repeating-linear-gradient(transparent, transparent 7.5mm, #D8DFD5 7.5mm, #D8DFD5 8mm); background-size: 100% 8mm;">
+    </div>
+
+    <!-- 푸터 -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px; font-size: 10px; color: #999;">
+      <span>세일고등학교</span>
+      <span>8mm Ruled 양식</span>
+    </div>
+  </div>
+
+
+  <!-- ================= [6] 도트형 노트 (DOT GRID - 5mm) ================= -->
+  <div class="page" style="width: 210mm; height: 297mm; background-color: #FAF8F5; padding: 18mm 16mm; position: relative; box-shadow: 0 4px 15px rgba(0,0,0,0.15); display: flex; flex-direction: column;">
+    <!-- 헤더 -->
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2px solid #a02411; padding-bottom: 8px; margin-bottom: 12px;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="font-size: 18px; font-weight: 800; color: #a02411;">DOT GRID NOTE</span>
+        <span style="font-size: 12px; color: #777;">| 5mm 도트</span>
+      </div>
+      <div style="display: flex; gap: 15px; font-size: 12px; color: #555;">
+        <span><strong>DATE:</strong> 202&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span><strong>TITLE:</strong> __________________________</span>
+      </div>
+    </div>
+
+    <!-- 5mm 도트 패턴 본문 -->
+    <div style="flex: 1; border: 1px solid #D8DFD5; background-color: #FAF8F5; background-image: radial-gradient(#B8B3A8 1.1px, transparent 1.1px); background-size: 5mm 5mm; background-position: 2.5mm 2.5mm;">
+    </div>
+
+    <!-- 푸터 -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px; font-size: 10px; color: #999;">
+      <span>세일고등학교</span>
+      <span>5mm Dot Grid 양식</span>
+    </div>
+  </div>
+
+
+  <!-- ================= [7] 무지형 노트 (BLANK) ================= -->
+  <div class="page" style="width: 210mm; height: 297mm; background-color: #FAF8F5; padding: 18mm 16mm; position: relative; box-shadow: 0 4px 15px rgba(0,0,0,0.15); display: flex; flex-direction: column;">
+    <!-- 헤더 -->
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2px solid #a02411; padding-bottom: 8px; margin-bottom: 12px;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="font-size: 18px; font-weight: 800; color: #a02411;">BLANK NOTE</span>
+        <span style="font-size: 12px; color: #777;">| 무지형 프리노트</span>
+      </div>
+      <div style="display: flex; gap: 15px; font-size: 12px; color: #555;">
+        <span><strong>DATE:</strong> 202&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span><strong>TITLE:</strong> __________________________</span>
+      </div>
+    </div>
+
+    <!-- 완전 여백 영역 (테두리만 부드럽게 감싸 마인드맵/도표 자유 작성) -->
+    <div style="flex: 1; border: 1px dashed #D0CCC2; background-color: #FAF8F5; position: relative; display: flex; justify-content: center; align-items: center;">
+      <!-- 중앙 워터마크 (은은한 학교 로고 연출) -->
+      <img src="세일고CI-01.png" alt="워터마크" style="opacity: 0.04; width: 120mm; height: 120mm; pointer-events: none;">
+    </div>
+
+    <!-- 푸터 -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px; font-size: 10px; color: #999;">
+      <span>세일고등학교</span>
+      <span>Blank 양식</span>
+    </div>
+  </div>
+
+</body>
+</html>

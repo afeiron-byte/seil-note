@@ -39,64 +39,46 @@
 </head>
 <body>
 
-  <!-- ================= [1] 표지 (COVER) ================= -->
+  <!-- ================= [1] 표지 (COVER - 수정됨) ================= -->
   <div class="page" style="width: 210mm; height: 297mm; background-color: #FAF8F5; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+    
     <!-- 상단 학교 전경 이미지 배경 영역 -->
-    <div style="position: relative; width: 100%; height: 46%; overflow: hidden;">
-      <img src="세일고등학교 전경.jpg" alt="세일고등학교 전경" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.92) contrast(1.05);">
-      <!-- 그라데이션 오버레이 -->
-      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(160, 36, 17, 0.4) 0%, rgba(250, 248, 245, 0.1) 60%, #FAF8F5 100%);"></div>
-      
-      <!-- 상단 엠블럼 배치 -->
-      <div style="position: absolute; top: 22mm; left: 20mm; display: flex; align-items: center; gap: 15px; background: rgba(255, 255, 255, 0.9); padding: 8px 18px; border-radius: 40px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-        <img src="세일고CI-01.png" alt="세일고 CI" style="width: 48px; height: 48px; object-fit: contain;">
-        <div>
-          <div style="font-size: 17px; font-weight: 800; color: #a02411; letter-spacing: -0.5px;">세일고등학교</div>
-          <div style="font-size: 10px; color: #555; font-weight: 600; letter-spacing: 0.5px;">SE-IL HIGH SCHOOL</div>
-        </div>
-      </div>
+    <div style="position: relative; width: 100%; height: 48%; overflow: hidden;">
+      <img src="세일고등학교 전경.jpg" alt="세일고등학교 전경" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.95) contrast(1.05);">
+      <!-- 부드러운 그라데이션 오버레이 -->
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(250, 248, 245, 0.4) 70%, #FAF8F5 100%);"></div>
     </div>
 
     <!-- 중앙 타이틀 및 슬로건 영역 -->
-    <div style="padding: 0 24mm; text-align: center; margin-top: -15mm; z-index: 2;">
+    <div style="padding: 0 24mm; text-align: center; margin-top: -10mm; z-index: 2;">
       <!-- 슬로건 이미지 -->
-      <div style="margin-bottom: 22px;">
-        <img src="세일로미래로꿈꾸는대로.png" alt="세일로 미래로 꿈꾸는대로" style="max-width: 320px; height: auto;">
+      <div style="margin-bottom: 24px;">
+        <img src="세일로미래로꿈꾸는대로.png" alt="세일로 미래로 꿈꾸는대로" style="max-width: 330px; height: auto;">
       </div>
 
       <!-- 메인 노트 타이틀 -->
-      <div style="display: inline-block; border-top: 3px solid #a02411; border-bottom: 3px solid #a02411; padding: 12px 35px; margin-bottom: 20px;">
-        <h1 style="margin: 0; font-size: 38px; color: #222222; font-weight: 900; letter-spacing: 2px;">학 습 노 트</h1>
+      <div style="display: inline-block; border-top: 3px solid #a02411; border-bottom: 3px solid #a02411; padding: 14px 40px; margin-bottom: 24px;">
+        <h1 style="margin: 0; font-size: 40px; color: #222222; font-weight: 900; letter-spacing: 3px;">학 습 노 트</h1>
       </div>
-      <p style="margin: 0; font-size: 14px; color: #666; font-weight: 500; letter-spacing: 1px;">STUDY &amp; THINKING WORKBOOK</p>
+
+      <!-- 과목명 단일 입력란 -->
+      <div style="max-width: 320px; margin: 0 auto; display: flex; align-items: flex-end; border-bottom: 2px solid #a02411; padding-bottom: 6px;">
+        <span style="font-size: 15px; font-weight: 800; color: #a02411; width: 65px; letter-spacing: 1px;">과 목</span>
+        <span style="flex: 1;"></span>
+      </div>
     </div>
 
-    <!-- 하단 사용자 정보 기입란 -->
-    <div style="padding: 0 25mm 28mm 25mm; z-index: 2;">
-      <div style="background-color: #FFFFFF; border: 1.5px solid #E2DDD5; border-radius: 12px; padding: 22px 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px 24px;">
-          <div style="display: flex; align-items: flex-end; border-bottom: 1.5px solid #C8C3BA; padding-bottom: 5px;">
-            <span style="font-size: 13px; font-weight: 700; color: #a02411; width: 60px;">학 년 / 반</span>
-            <span style="flex: 1;"></span>
-          </div>
-          <div style="display: flex; align-items: flex-end; border-bottom: 1.5px solid #C8C3BA; padding-bottom: 5px;">
-            <span style="font-size: 13px; font-weight: 700; color: #a02411; width: 60px;">번 호</span>
-            <span style="flex: 1;"></span>
-          </div>
-          <div style="display: flex; align-items: flex-end; border-bottom: 1.5px solid #C8C3BA; padding-bottom: 5px;">
-            <span style="font-size: 13px; font-weight: 700; color: #a02411; width: 60px;">이 름</span>
-            <span style="flex: 1;"></span>
-          </div>
-          <div style="display: flex; align-items: flex-end; border-bottom: 1.5px solid #C8C3BA; padding-bottom: 5px;">
-            <span style="font-size: 13px; font-weight: 700; color: #a02411; width: 60px;">과 목</span>
-            <span style="flex: 1;"></span>
-          </div>
+    <!-- 하단 영역: 우측 하단 세일고등학교 로고 배치 -->
+    <div style="padding: 0 20mm 20mm 20mm; display: flex; justify-content: flex-end; align-items: flex-end; z-index: 2;">
+      <div style="display: flex; align-items: center; gap: 12px; background: rgba(255, 255, 255, 0.85); padding: 10px 18px; border-radius: 40px; border: 1px solid #E5E1D8; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+        <img src="세일고CI-01.png" alt="세일고 CI" style="width: 44px; height: 44px; object-fit: contain;">
+        <div style="text-align: left;">
+          <div style="font-size: 16px; font-weight: 800; color: #a02411; letter-spacing: -0.5px; line-height: 1.1;">세일고등학교</div>
+          <div style="font-size: 9.5px; color: #666; font-weight: 600; letter-spacing: 0.5px; margin-top: 2px;">SE-IL HIGH SCHOOL</div>
         </div>
       </div>
-      <div style="text-align: center; margin-top: 18px; font-size: 11px; color: #888;">
-        세일고등학교 학생들의 꿈과 배움을 응원합니다.
-      </div>
     </div>
+
   </div>
 
 
@@ -159,12 +141,10 @@
       
       <!-- 문제 1 블록 -->
       <div style="flex: 1; border: 1.5px solid #D8DFD5; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; background: #fff;">
-        <!-- 문제 메타 바 -->
         <div style="background-color: #F1EDE4; padding: 6px 12px; display: flex; justify-content: space-between; font-size: 11px; color: #333; border-bottom: 1px solid #D8DFD5;">
           <div><strong>문항 번호:</strong> NO. _____ &nbsp;&nbsp;|&nbsp;&nbsp; <strong>단원/개념:</strong> ______________________</div>
           <div><strong>오답 원인:</strong> [ ] 개념부족 [ ] 계산실수 [ ] 지문오독 [ ] 시간부족</div>
         </div>
-        <!-- 2분할: 좌측 문제 / 우측 바른 풀이 -->
         <div style="flex: 1; display: flex;">
           <div style="width: 48%; border-right: 1.5px dashed #D8DFD5; padding: 10px; background-color: #FAF8F5; display: flex; flex-direction: column;">
             <div style="font-size: 11px; font-weight: 700; color: #a02411; margin-bottom: 4px;">[ 문제 및 나의 풀이 (오답) ]</div>
@@ -173,7 +153,6 @@
             <div style="font-size: 11px; font-weight: 700; color: #1f5f3f; margin-bottom: 4px;">[ 올바른 풀이 &amp; 피드백 ]</div>
           </div>
         </div>
-        <!-- 핵심 포인트/개념 박스 -->
         <div style="border-top: 1px solid #D8DFD5; padding: 6px 12px; background-color: #F7F5EE; font-size: 11px;">
           <strong style="color: #a02411;">💡 핵심 공식 및 다시 볼 개념:</strong>
         </div>
@@ -181,12 +160,10 @@
 
       <!-- 문제 2 블록 -->
       <div style="flex: 1; border: 1.5px solid #D8DFD5; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; background: #fff;">
-        <!-- 문제 메타 바 -->
         <div style="background-color: #F1EDE4; padding: 6px 12px; display: flex; justify-content: space-between; font-size: 11px; color: #333; border-bottom: 1px solid #D8DFD5;">
           <div><strong>문항 번호:</strong> NO. _____ &nbsp;&nbsp;|&nbsp;&nbsp; <strong>단원/개념:</strong> ______________________</div>
           <div><strong>오답 원인:</strong> [ ] 개념부족 [ ] 계산실수 [ ] 지문오독 [ ] 시간부족</div>
         </div>
-        <!-- 2분할: 좌측 문제 / 우측 바른 풀이 -->
         <div style="flex: 1; display: flex;">
           <div style="width: 48%; border-right: 1.5px dashed #D8DFD5; padding: 10px; background-color: #FAF8F5; display: flex; flex-direction: column;">
             <div style="font-size: 11px; font-weight: 700; color: #a02411; margin-bottom: 4px;">[ 문제 및 나의 풀이 (오답) ]</div>
@@ -195,7 +172,6 @@
             <div style="font-size: 11px; font-weight: 700; color: #1f5f3f; margin-bottom: 4px;">[ 올바른 풀이 &amp; 피드백 ]</div>
           </div>
         </div>
-        <!-- 핵심 포인트/개념 박스 -->
         <div style="border-top: 1px solid #D8DFD5; padding: 6px 12px; background-color: #F7F5EE; font-size: 11px;">
           <strong style="color: #a02411;">💡 핵심 공식 및 다시 볼 개념:</strong>
         </div>
@@ -225,7 +201,7 @@
       </div>
     </div>
 
-    <!-- 5mm 모눈 본문 (눈 피로 완화 그린-그레이 톤 적용) -->
+    <!-- 5mm 모눈 본문 -->
     <div style="flex: 1; border: 1px solid #D8DFD5; background-color: #FAF8F5; background-image: 
         linear-gradient(to right, #E0DDD5 1px, transparent 1px),
         linear-gradient(to bottom, #E0DDD5 1px, transparent 1px);
@@ -306,9 +282,8 @@
       </div>
     </div>
 
-    <!-- 완전 여백 영역 (테두리만 부드럽게 감싸 마인드맵/도표 자유 작성) -->
+    <!-- 완전 여백 영역 -->
     <div style="flex: 1; border: 1px dashed #D0CCC2; background-color: #FAF8F5; position: relative; display: flex; justify-content: center; align-items: center;">
-      <!-- 중앙 워터마크 (은은한 학교 로고 연출) -->
       <img src="세일고CI-01.png" alt="워터마크" style="opacity: 0.04; width: 120mm; height: 120mm; pointer-events: none;">
     </div>
 
